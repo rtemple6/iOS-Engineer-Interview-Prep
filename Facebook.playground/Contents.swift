@@ -95,6 +95,8 @@ class ThreeSum {
         return ret
     }
 }
+//Runtime
+//Quadtratic
 let threeSome = ThreeSum()
 threeSome.threeSum([1,2,3,4,5,-1,2,3,-4,-5,-1,0,0,-1])
 //==============================================================================
@@ -123,5 +125,9 @@ class IntersectionOfTwoArraysII {
         return result
     }
 }
+//Runtime
+//O(n + m)
+//Space
+//O(n)
 let intersectionOfTwoArrays = IntersectionOfTwoArraysII()
 intersectionOfTwoArrays.intersect([4,9,5], [9,4,9,8,4])
