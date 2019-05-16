@@ -97,3 +97,31 @@ class ThreeSum {
 }
 let threeSome = ThreeSum()
 threeSome.threeSum([1,2,3,4,5,-1,2,3,-4,-5,-1,0,0,-1])
+//==============================================================================
+
+//==============================================================================
+//Given two arrays, write a function to compute their intersection.
+class IntersectionOfTwoArraysII {
+    func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+        var hashMap = [Int: Int]()
+        var result = [Int]()
+        
+        //Generate Hash of all occurences
+        for num in nums1 {
+            let prev = hashMap[num] ?? 0
+            hashMap[num] = prev + 1
+        }
+        
+        for num in nums2 {
+            var value = hashMap[num] ?? 0
+            if value > 0 {
+                hashMap[num] = value - 1
+                result.append(num)
+            }
+        }
+        
+        return result
+    }
+}
+let intersectionOfTwoArrays = IntersectionOfTwoArraysII()
+intersectionOfTwoArrays.intersect([4,9,5], [9,4,9,8,4])
