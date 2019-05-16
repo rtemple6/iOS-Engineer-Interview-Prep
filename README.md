@@ -1,7 +1,7 @@
 # Facebook-Interview
 
-Array and Strings
-Stacks and Queues
+Array and Strings/n
+Stacks and Queues\n
 Trees and Graphs
 Backtracking
 Sorting and Searching
