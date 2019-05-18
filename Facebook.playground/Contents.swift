@@ -487,3 +487,37 @@ left.left = TreeNode(3)
 left.right = TreeNode(4)
 right.right = TreeNode(6)
 flattenBinary.flatten(root)
+//==============================================================================
+
+//==============================================================================
+//Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
+//
+//Example:
+//
+//Input: [1,2,3,null,5,null,4]
+//Output: [1, 3, 4]
+
+
+class BinaryTreeRightSideView {
+    // dfs(node, res, depth)
+    // alwasy visit right node first
+    // if depth == res.count, add node.val
+    func rightSideView(_ root: TreeNode?) -> [Int] {
+        var res = [Int]()
+        dfs(root, &res, 0)
+        return res
+    }
+    
+    func dfs(_ node: TreeNode?, _ res: inout [Int], _ depth: Int) {
+        guard let node = node else {
+            return
+        }
+        
+        if depth == res.count {
+            res.append(node.val)
+        }
+        
+        dfs(node.right, &res, depth + 1)
+        dfs(node.left, &res, depth + 1)
+    }
+}
