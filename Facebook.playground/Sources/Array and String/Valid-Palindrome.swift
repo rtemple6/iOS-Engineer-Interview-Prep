@@ -1,8 +1,8 @@
 import Foundation
 
-class ValidPalindrome {
+public class ValidPalindrome {
     ///Given a non-empty string s, you may delete at most one character. Judge whether you can make it a palindrome.
-    func testCase() {
+    public func testCase() {
         let valid = ValidPalindrome()
         print(valid.validPalindrome("aabaaaaaad"))
     }
@@ -14,9 +14,11 @@ class ValidPalindrome {
     }
     
     private func valid(_ s: ArraySlice<Character>) -> Bool {
+        //Start index and end index
         var i = s.startIndex
         var j = s.endIndex - 1
         while i < j {
+            
             let startLetter = s[i]
             let endLetter = s[j]
             if startLetter != endLetter {
