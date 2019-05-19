@@ -18,6 +18,7 @@ public class IntersectionOfTwoArraysII {
         let intersectionOfTwoArrays = IntersectionOfTwoArraysII()
         print(intersectionOfTwoArrays.intersect([4,9,5], [9,4,9,8,4]))
     }
+    
     private func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
         var hashMap = [Int: Int]()
         var result = [Int]()
