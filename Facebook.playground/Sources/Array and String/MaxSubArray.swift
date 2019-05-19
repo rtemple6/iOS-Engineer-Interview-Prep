@@ -5,7 +5,7 @@ public class MaxSubArray {
     public func testCase() {
         let solution = MaxSubArray()
         var array = [-1, -1, 3, 4]
-        let max = solution.maxset(&array)
+        print(solution.maxset(&array))
     }
     private func maxset(_ A: inout [Int]) -> [Int] {
         var result: [Int] = []
