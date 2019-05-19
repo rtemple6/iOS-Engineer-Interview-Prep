@@ -5,7 +5,7 @@ public class SetOperations {
     public func testCase() {
         //Set operations
         var colors: Set<UIColor> = [.red, .blue, .purple]
-        var colors1: Set<UIColor> = [.red, .black, .purple]
+        let colors1: Set<UIColor> = [.red, .black, .purple]
         
         //colors.contains(.red)
         //colors.remove(.red)
@@ -17,7 +17,7 @@ public class SetOperations {
         }
         
         //Returns all color in colors1 that also in colors
-        colors.intersection(colors1)
+        print(colors.intersection(colors1))
         //Removes all color in colors that colors1 contains
         colors.subtract(colors1)
     }

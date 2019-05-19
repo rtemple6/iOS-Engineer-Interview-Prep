@@ -10,7 +10,7 @@ import Foundation
 public class LetterCombinationsOfAPhoneNumber {
     public func testCase() {
         let letterCombos = LetterCombinationsOfAPhoneNumber()
-        letterCombos.letterCombinations("22345").count
+        print(letterCombos.letterCombinations("22345").count)
     }
     
     private func letterCombinations(_ digits: String) -> [String] {

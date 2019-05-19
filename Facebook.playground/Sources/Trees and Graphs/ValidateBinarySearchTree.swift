@@ -27,7 +27,7 @@ public class ValidateBinarySearchTree {
         let right = TreeNode(3)
         root.left = left
         root.right = right
-        validateBinary.isValidBST(root)
+        print(validateBinary.isValidBST(root))
 
     }
     private func isValidBST(_ root: TreeNode?) -> Bool {
