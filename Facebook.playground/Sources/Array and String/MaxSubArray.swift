@@ -1,12 +1,13 @@
 import Foundation
 
-
-
-
-
 //Find out the maximum sub-array of non negative numbers from an array.
-class Solution {
-    func maxset(_ A: inout [Int]) -> [Int] {
+public class MaxSubArray {
+    public func testCase() {
+        let solution = MaxSubArray()
+        var array = [-1, -1, 3, 4]
+        let max = solution.maxset(&array)
+    }
+    private func maxset(_ A: inout [Int]) -> [Int] {
         var result: [Int] = []
         
         var current: [Int] = []
@@ -29,7 +30,3 @@ class Solution {
         return result
     }
 }
-
-let solution = Solution()
-var array = [-1, -1, 3, 4]
-let max = solution.maxset(&array)
