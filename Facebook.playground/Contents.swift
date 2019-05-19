@@ -1,65 +1,6 @@
 import UIKit
 
-//Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
-class TrappingRainWater {
-    func trap(_ height: [Int]) -> Int {
-        guard height.count > 0 else {
-            return 0
-        }
-        
-        var leftPtr = 0, leftMax = height[0]
-        var rightPtr = height.count - 1, rightMax = height[height.count-1]
-        var water = 0
-        while leftPtr < rightPtr{
-            while leftMax <= rightMax && leftPtr < rightPtr{
-                if height[leftPtr] <= leftMax{
-                    water += leftMax - height[leftPtr]
-                    leftPtr += 1
-                }else{
-                    leftMax = height[leftPtr]
-                }
-            }
-            
-            while rightMax <= leftMax && leftPtr < rightPtr{
-                if height[rightPtr] <= rightMax{
-                    water += rightMax - height[rightPtr]
-                    rightPtr -= 1
-                }else{
-                    rightMax = height[rightPtr]
-                }
-            }
-        }
-        return water
-    }
-}
-let trapping = TrappingRainWater()
-trapping.trap([0,1,0,2,1,0,1,3,2,1,2,1])
-//==============================================================================
 
-//==============================================================================
-//Given an array nums of n integers where n > 1,  return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
-//Input:  [1,2,3,4]
-//Output: [24,12,8,6]
-class ProductOfArrayExceptSelf {
-    func productExceptSelf(_ nums: [Int]) -> [Int] {
-        var accumulator = 1
-        var result = Array(repeating: 1, count: nums.count)
-        
-        for (idx, n) in nums.enumerated() {
-            result[idx] = accumulator
-            accumulator *= n
-        }
-        
-        accumulator = 1
-        for i in stride(from: nums.count - 1, to: -1, by: -1){
-            result[i] *= accumulator
-            accumulator *= nums[i]
-        }
-        return result
-    }
-}
-let poaes = ProductOfArrayExceptSelf()
-poaes.productExceptSelf([1, 2, 3, 4])
 //==============================================================================
 
 //==============================================================================

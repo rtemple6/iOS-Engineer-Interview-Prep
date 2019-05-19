@@ -12,7 +12,7 @@ public class AddBinary {
     
     public func testCase(){
         let addBinary = AddBinary()
-        addBinary.addBinary("11", "1")
+        print(addBinary.addBinary("11", "1"))
     }
     
     private func addBinary(_ a: String, _ b: String) -> String {
