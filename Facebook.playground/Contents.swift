@@ -2,55 +2,17 @@ import UIKit
 
 //MARK: Array and String
 
-//==============================================================================
-//Given a non-empty string s, you may delete at most one character. Judge whether you can make it a palindrome.
-class ValidPalindrome {
-    func validPalindrome(_ s: String) -> Bool {
-        let s = Array(s)[0...]
-        return valid(s, false)
-    }
-    
-    private func valid(_ s: ArraySlice<Character>, _ strict: Bool) -> Bool {
-        var i = s.startIndex, j = s.endIndex - 1
-        while i < j {
-            if s[i] != s[j] {
-                if strict {
-                    return false
-                }
-                let s1 = s[i+1...j], s2 = s[i...j-1]
-                return valid(s1, true) || valid(s2, true)
-            }
-            i += 1
-            j -= 1
-        }
-        return true
-    }
-}
 
-let valid = ValidPalindrome()
-valid.validPalindrome("aabaaaaaad")
-//==============================================================================
 
-//==============================================================================
-//Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
-class MoveZeroes {
-    func moveZeroes(_ nums: inout [Int]) {
-        let count = nums.count
-        nums = nums.filter { $0 != 0 }
-        while nums.count < count {
-            nums.append(0)
-        }
-    }
-}
-let moveZeroes = MoveZeroes()
-var moveZeroesInput = [0, 1, 0, 3, 12]
-moveZeroes.moveZeroes(&moveZeroesInput)
-moveZeroesInput
-//==============================================================================
 
-//==============================================================================
-//Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
+
+
+
 class ThreeSum {
+    
+    func testCase() {
+        //Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
+    }
     func threeSum(_ nums: [Int]) -> [[Int]] {
         var ret = [[Int]]()
         if nums.count <= 2 {
@@ -720,4 +682,4 @@ class LetterCombinationsOfAPhoneNumber {
 }
 
 let letterCombos = LetterCombinationsOfAPhoneNumber()
-letterCombos.letterCombinations("2234568999").count
+letterCombos.letterCombinations("22345").count
