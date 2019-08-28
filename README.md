@@ -1,6 +1,6 @@
 # Facebook-Interview
 
-Examples done from LeetCode to prepare for iOS Software Engineer position at Facebook/Instagram NYC.
+Examples done from LeetCode for iOS Software Engineer at Facebook/Instagram
 
 <a href="Facebook.playground/Sources/Array%20and%20String">Array and Strings</a>
 
