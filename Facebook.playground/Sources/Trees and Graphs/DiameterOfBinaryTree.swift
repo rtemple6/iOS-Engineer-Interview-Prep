@@ -35,5 +35,5 @@ public class DiameterOfBinaryTree {
         } else {
             return max(longestPath(root!.left, currentLength: currentLength + 1), longestPath(root!.right, currentLength: currentLength + 1))
         }
-    }
+    } 
 }
