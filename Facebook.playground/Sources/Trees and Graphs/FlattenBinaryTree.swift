@@ -9,7 +9,7 @@ import Foundation
 //   2   5
 //  / \   \
 // 3   4   6
-//The flattened tree should look like:
+//The flattened tree should look like: 
 //
 //1
 // \
