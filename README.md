@@ -1,6 +1,6 @@
 # iOS Software Engineer Interview Prep
 
-Examples done from LeetCode for iOS Software Engineer at Facebook/Instagram
+Examples done from LeetCode for iOS Software Engineer
 
 <a href="Facebook.playground/Sources/Array%20and%20String">Array and Strings</a>
 
